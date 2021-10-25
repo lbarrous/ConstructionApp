@@ -2,7 +2,7 @@ import * as http from 'http';
 import app from './app';
 import log from './logger';
 
-const port: number = parseInt(process.env.PORT as string, 10) || 3000;
+const port = 3003;
 
 const server = http.createServer(app);
 
