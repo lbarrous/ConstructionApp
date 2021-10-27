@@ -5,8 +5,8 @@ import { getParsedQueryParameters } from '../utils/parser'
 
 export const getCompaniesHandler = async (req: Request, res: Response) => {
     try {
-        const { criteria, pageSize, pageNumber} = getParsedQueryParameters(req);
-        const companies = findCompaniesByCriteria(criteria, pageSize, pageNumber)
+        const { criteria } = getParsedQueryParameters(req);
+        const companies = findCompaniesByCriteria(criteria)
   
         return res.status(200).json(companies);
       } catch(e){
